@@ -33,7 +33,8 @@ jobs:
           npm test
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
-        with:
-          folder: build
-          branch: main
+        run:  npm run deploy
+        # uses: JamesIves/github-pages-deploy-action@v4.4.0
+        # with:
+        #   folder: build
+        #   branch: main
