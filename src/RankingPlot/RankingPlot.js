@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactEcharts from "echarts-for-react";
 import './RankingPlot.css';
 
 import * as echarts from 'echarts';
@@ -24,15 +25,12 @@ export class RankingPlot extends React.Component {
 
     }
 
-    componentDidMount() {
-        this.chartDom = document.getElementById('ranking-plot-container');
-
-        this.rankingPlot = echarts.init( this.chartDom);
-
-        this.rankingPlot.setOption(this.plotOptions);
+    getOptions() {
+        return this.plotOptions
     }
 
+
     render() {
-        return <div id="ranking-plot-container"></div>;
+        return <ReactEcharts option={this.getOptions()} opts={{renderer: 'svg'}}/>
     }
 }
