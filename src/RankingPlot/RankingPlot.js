@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactEcharts from "echarts-for-react";
 import './RankingPlot.css';
-
-import * as echarts from 'echarts';
-
-
 export class RankingPlot extends React.Component {
 
     constructor() {
