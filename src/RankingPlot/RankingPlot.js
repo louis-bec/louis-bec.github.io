@@ -20,7 +20,7 @@ export class RankingPlot extends React.Component {
 
             let plotOptions = {
                 xAxis: {
-                    data: data.ranking.map((record) => record.name),
+                    data: data.ranking.map((record)=>record.name),
                 },
                 yAxis: {},
                 series: [
